@@ -1,2 +1,2 @@
 # Caesar_Cypher
-Caesar_Cypher
+encrypts a word using caesar cypher
