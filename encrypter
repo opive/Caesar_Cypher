@@ -1,0 +1,32 @@
+#Olivia Jin 349254300
+def encrypt(word, shift):
+    ''' encrypts the given word by shifting it
+
+    args: 
+    word - input from the user 
+    shift - number the user wants the word shifted
+
+    returns: the encrypted word
+    
+    '''
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    answer = ""
+
+    for letter in word:
+        index = alphabet.find(letter)
+        if (index + shift) > 25:
+            answerCharIndex = (index + shift) % 25
+            answerChar = alphabet[answerCharIndex]
+            answer += answerChar
+        else:
+            answerCharIndex = index + shift 
+            answerChar = alphabet[answerCharIndex]
+            answer += answerChar
+        
+    return answer
+
+
+word = input()
+shift = int(input())
+print(encrypt(word, shift))
+
